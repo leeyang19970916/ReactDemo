@@ -1,0 +1,18 @@
+.threeZone{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .icon{
+        color: dimgray;
+        background-color: whitesmoke;
+        font-size: larger;
+        padding: 10px 50px;
+        border-radius: 10px;
+        border: 3px solid darkslategrey;
+        margin: 20px 20px;
+        &:hover{
+            background-color: blanchedalmond;
+            color: saddlebrown;
+        }
+    }
+}
