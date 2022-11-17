@@ -1,0 +1,46 @@
+react筆記
+以前
+const { name, description, ...other } = product;
+const { offers } = product;    // 透過解構賦值先從 product 取出 offers
+const iPhone = {
+  ...mobilePhone,
+  name: 'iPhone',
+  os: 'iOS',
+};
+
+JSX {變數} 不一定要用ES6 
+可以直接在裡面寫計算判斷式
+
+router rooid 怎麼抓出來 要去除錯 如果不是怎麼辦
+如果出錯怎麼辦
+現在
+(component)物件(像class、function)
+const Counter=()=>{ return (  ) }
+<Counter/>
+return要包起來，裡面只能有一個DOM元素往下寫(類似template)
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Counter/>)
+先綁HTML的位置 在渲染
+
+
+  const [ inputValue ,  setInputValue ]  =  useState(0);
+陣列0跟1 拉出來用 所以用  [  ] 
+input onChange value e.target
+
+onChange={()=>eeeee(inputValue)} 
+eeeee這個function把Status帶進去 然後不管她要做什麼 最後都要餵給
+setInputValue 讓他知道 你追蹤的DATA確實變換了 你要去渲染資料
+
+輸入內容會執行 handleChange 資料改變 再執行 setInputValue
+才會去改變Status的狀態
+
+
+父層傳給子層
+    <CardFooter ww={inputValue} / >
+像元素標籤一樣 帶進去變成參數
+ww={inputValue}  帶入到這個元件裡面
+const CardFooter = (props) => {} 他就會是這裡的props=ww
+      const { ww } = props; 
+      inputValue=ww
+順利取出值 使用其中
