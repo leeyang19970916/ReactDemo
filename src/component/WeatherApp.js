@@ -1,7 +1,9 @@
 import Dog from "../images/柯基.jpg";
+// import { ReactComponent as RainIcon } from '../images/柯基.jpg';
 // import { useState } from "react";
+
 import React, {
-  useState
+  useState,useEffect
 } from 'react';
 const WEATHER = () => {
 
@@ -22,7 +24,7 @@ const WEATHER = () => {
       // 使用 response.json() 將資源轉為 JSON 格式
       const json = await res.json();
       const locationData = json.records.location[0];
-      console.log(locationData);
+      // console.log(locationData);
               // STEP 2：將風速（WDSD）、氣溫（TEMP）和濕度（HUMD）的資料取出
               const weatherElements = locationData.weatherElement.reduce(
                 (neededElements, item) => {
@@ -57,8 +59,8 @@ console.log(currentWeather,"currentWeather")
       <div><img src={Dog} className='w-25'></img></div>
       <div className="weather">
         <main className="bg-white main">
-          <div className="city text-dark">城市:{currentWeather.local}</div>
-          <div className="city text-dark">日期:{currentWeather.time}</div>
+          <div className="city text-dark">城市:{currentWeather.locationName}</div>
+          <div className="city text-dark">日期:{currentWeather.observationTime}</div>
           <div className="status text-secondary">天氣狀況:{currentWeather.description}</div>
           <div className="temperature text-secondary">溫度:{currentWeather.temperature}<span>.c</span></div>
           <div className="windSpeed text-secondary">風速:{currentWeather.windSpeed}m/h</div>
