@@ -1,3 +1,23 @@
+React 隨手筆記 （未加工有什麼心得寫什麼）
+1要改data一定要過useState function
+2 component is inde  not interfere(干涉）
+3父子層status溝通一定要互相傳遞 
+父傳子
+當參數傳入
+透過ＨＴＭＬ屬性掛給他，將形成參數(props) 對照你的命名可以抓下來
+4Ｈook系列 都只能裸在外面用 no if no for 會破壞呼叫ＨＯＯＫ的順序
+5 F12有component 可以檢視自己的 state 怎麼用的
+	four icons can use/ profilers(效能）
+6 import App (Capital) /export default App
+7兩個元件放在一起怎麼怪怪的？
+Ａ：不管return render component, must be one if u have two
+Should use <div> to involve(包含） them
+8bootstrap 超詭異 大致可以分三個 
+功能(function) 樣式(variables) 總集(bootstrap)
+功能寫好 樣式寫好（自制）bootstrap.scss引入 並整合 產生一個完整的 library 完美
+9. Component 要大寫 const WEATHER
+
+
 react筆記
 以前
 const { name, description, ...other } = product;
